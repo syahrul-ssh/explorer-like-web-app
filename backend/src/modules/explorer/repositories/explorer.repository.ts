@@ -51,6 +51,15 @@ export class ExplorerRepository {
     });
   }
 
+  async saveFile(fileName: string, folderId: number) {
+    return await prisma.file.create({
+      data: {
+        name: fileName,
+        folderId
+      }
+    });
+  }
+
   async searchFolderAndFiles(search: string) {
     return await prisma.folder.findMany({
       where: {

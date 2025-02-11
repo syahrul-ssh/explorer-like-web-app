@@ -9,4 +9,6 @@ export const explorerRoutes = new Elysia()
   .post('/api/folder', explorerController.createFolder)
   .put('/api/folder/:id', explorerController.updateFolder)
   .delete('/api/folder/:id', explorerController.deleteFolder)
+  .post('/api/upload', explorerController.uploadFile)
+  .post('/api/file', explorerController.saveFile)
   .get('/api/search', explorerController.searchFolderAndFiles);

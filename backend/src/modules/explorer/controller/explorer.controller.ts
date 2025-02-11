@@ -23,6 +23,19 @@ export class ExplorerController {
     return await this.explorerService.deleteFolder(+params.id);
   }
 
+  uploadFile = async ({ request }: { request: Request }) => {
+    const formData = await request.formData();
+    const file = formData.get('file') as File;
+
+    if (!file) throw new Error('No file uploaded');
+
+    return await this.explorerService.uploadFile(file);
+  };
+
+  saveFile = async ({ body }: { body: { fileName: string, folderId: number } }) => {
+    return await this.explorerService.saveFile(body.fileName, body.folderId);
+  }
+
   searchFolderAndFiles = async ({ query }: { query: { search: string } }) => {
     return await this.explorerService.searchFolderAndFiles(query.search);
   }
