@@ -29,7 +29,6 @@ const createFolder = async () => {
   });
   location.reload();
   fetchFolderDetails(data.id);
-  //reloadpage
 };
 
 const uploadFile = async (event) => {

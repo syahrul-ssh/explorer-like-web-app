@@ -14,9 +14,9 @@ Ensure you have **Bun** installed.
    ```sh
    bun install
    ```
-3. Setup the database (if using Prisma):
+3. Setup the database:
    ```sh
-   bun run prisma migrate dev
+   bun prisma migrate dev --name init
    ```
 4. Start the backend server:
    ```sh
