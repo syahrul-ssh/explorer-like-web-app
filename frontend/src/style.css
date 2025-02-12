@@ -1,0 +1,75 @@
+/* Main container using Flexbox */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar for folder tree */
+.sidebar {
+  width: 25%;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f4f4f4;
+}
+
+/* Right panel (folder contents) */
+.content {
+  width: 75%;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Search input */
+.search-box {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.folder-item {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.folder-item:hover {
+  background: #ddd;
+}
+
+.sub-folder {
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sub-folder:hover {
+  background: #ddd;
+}
+
+/* Button Styles */
+.create-folder, .upload-file {
+  background: #f4f4f4;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-file {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.create-folder:hover, .upload-file:hover {
+  background: #adadad;
+}

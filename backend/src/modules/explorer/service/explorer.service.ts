@@ -61,6 +61,9 @@ export class ExplorerService {
   }
 
   async searchFolderAndFiles(search: string) {
+    if (!search) {
+      return await this.explorerRepo.getAllFolders();
+    }
     return await this.explorerRepo.searchFolderAndFiles(search);
   }
 }

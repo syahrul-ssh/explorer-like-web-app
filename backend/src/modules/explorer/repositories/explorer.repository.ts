@@ -3,6 +3,7 @@ import { prisma } from "../../../config/prisma";
 export class ExplorerRepository {
   async getAllFolders() {
     return await prisma.folder.findMany({
+      where: { parentId: null },
       include: { children: true },
       orderBy: { name: 'asc' }
     });
